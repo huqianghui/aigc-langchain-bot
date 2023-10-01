@@ -6,7 +6,11 @@ This bot has been created using [Bot Framework](https://dev.botframework.com).
 Services and tools used:
 
 - Azure App Service (Web App) - Chatbot API Hosting
+  <img width="1400" alt="Screenshot 2023-10-01 at 10 20 10" src="https://github.com/huqianghui/aigc-langchain-bot/assets/7360524/167796f5-270e-4410-89ff-dbd7ea4f1327">
+
 - Azure Bot Service - A service for managing communication through various channels
+  <img width="1400" alt="Screenshot 2023-10-01 at 10 21 21" src="https://github.com/huqianghui/aigc-langchain-bot/assets/7360524/fb6df525-eb24-4d8c-bfee-14da782b37c1">
+
 
 ## Deploy Bot To Azure Web App
 
