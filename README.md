@@ -37,8 +37,12 @@ Don't worry if after running the command it says retrying many times, the zip fi
 Don't worry if after running the command it says retrying many times, the zip files already uploaded and is building. 
 
 7. In the Azure Portal: In your Bot Service , add multiple channels (Including Teams) by clicking in **Channels**
+<img width="1400" alt="Screenshot 2023-10-01 at 10 24 39" src="https://github.com/huqianghui/aigc-langchain-bot/assets/7360524/ffaa2909-4e71-4e45-b2a6-38e2778fad92">
 
 8. Go to [apps/frontend](https://github.com/huqianghui/Azure-Cognitive-Search-Azure-OpenAI-Accelerator/tree/main/apps/frontend) folder and follow the steps in README.md to deploy a Frontend application that uses the bot.
+<img width="1200" alt="Screenshot 2023-10-01 at 10 25 30" src="https://github.com/huqianghui/aigc-langchain-bot/assets/7360524/f7f05eba-81a9-43c2-9ea5-3f2b048bf3aa">
+
+
 
 ## Reference documentation
 
