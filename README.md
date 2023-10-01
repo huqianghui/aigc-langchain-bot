@@ -1,5 +1,3 @@
-# aigc-langchain-bot
-
 <h1 align="center">AIGC By langchain + Bot Service
 </h1>
 
