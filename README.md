@@ -31,6 +31,7 @@ az webapp deployment source config-zip --resource-group "<resource-group-name>" 
 Don't worry if after running the command it says retrying many times, the zip files already uploaded and is building.
 
 5. In the Azure Portal: **Wait around 5 minutes** and test your bot by going to your Azure Bot Service created in Step 2 and clicking on: **Test in Web Chat**
+<img width="1000" alt="Screenshot 2023-10-01 at 10 23 09" src="https://github.com/huqianghui/aigc-langchain-bot/assets/7360524/ae0b81cf-27fe-4f5b-912c-c5a44b906415">
 
 **Note**: If you get this error: `An error occured during testing. Status Code: 404`. **Cause**: app:app cannot be found . **Solution**:   In the Azure Portal, you can find this settting in: `Configuration->Startup Command: gunicorn --bind 0.0.0.0 --worker-class aiohttp.worker.GunicornWebWorker --timeout 600 app:APP`.
 Don't worry if after running the command it says retrying many times, the zip files already uploaded and is building. 
