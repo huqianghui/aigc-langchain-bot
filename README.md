@@ -18,25 +18,24 @@ Below are the steps to run the Bot API as an Azure Wep App, connected with the A
 
 2. Deploy the Bot Web App and the Bot Service by clicking the Button below and type the App Registration ID and Secret Value that you got in Step 1 along with all the other ENV variables you used in the Notebooks
 
-[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpablomarin%2FGPT-Azure-Search-Engine%2Fmain%2Fapps%2Fbackend%2Fazuredeploy-backend.json)
+3. Zip the code of the bot by executing the following command in the terminal:
 
-3. Zip the code of the bot by executing the following command in the terminal (**you have to be inside the app/backend/ folder**):
-```bash
-zip -j backend.zip ../../common/* ./*
-```
 4. Using the Azure CLI deploy the bot code to the Azure App Service created on Step 2
 ```bash
 az login -i
-az webapp deployment source config-zip --resource-group "<resource-group-name>" --name "<name-of-backend-app-service>" --src "backend.zip"
+az webapp deployment source config-zip --resource-group "<resource-group-name>" --name "<name-of-backend-app-service>" --src "aigc-langchain-bot.zip"
 ```
 **Note**: If you get this error: `An error occured during deployment. Status Code: 401`. **Cause**: Some FDPO Azure Subscriptions disable Azure Web Apps Basic Authentication every minute (don't know why). **Solution**:  before running the above `az webapp deployment` command, make sure that your backend azure web app has Basic Authentication ON. In the Azure Portal, you can find this settting in: `Configuration->General Settings`.
 Don't worry if after running the command it says retrying many times, the zip files already uploaded and is building.
 
 5. In the Azure Portal: **Wait around 5 minutes** and test your bot by going to your Azure Bot Service created in Step 2 and clicking on: **Test in Web Chat**
 
-6. In the Azure Portal: In your Bot Service , add multiple channels (Including Teams) by clicking in **Channels**
+**Note**: If you get this error: `An error occured during testing. Status Code: 404`. **Cause**: app:app cannot be found . **Solution**:   In the Azure Portal, you can find this settting in: `Configuration->Startup Command: gunicorn --bind 0.0.0.0 --worker-class aiohttp.worker.GunicornWebWorker --timeout 600 app:APP`.
+Don't worry if after running the command it says retrying many times, the zip files already uploaded and is building. 
 
-7. Go to apps/frontend folder and follow the steps in README.md to deploy a Frontend application that uses the bot.
+7. In the Azure Portal: In your Bot Service , add multiple channels (Including Teams) by clicking in **Channels**
+
+8. Go to [apps/frontend](https://github.com/huqianghui/Azure-Cognitive-Search-Azure-OpenAI-Accelerator/tree/main/apps/frontend) folder and follow the steps in README.md to deploy a Frontend application that uses the bot.
 
 ## Reference documentation
 
